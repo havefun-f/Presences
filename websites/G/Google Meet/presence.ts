@@ -11,15 +11,15 @@ presence.on("UpdateData", () => {
     path = document.location.pathname.toLowerCase();
 
   if (path === "/") {
-    presenceData.details = "Initial page";
-    presenceData.state = "Just waiting";
+    presenceData.details = "Home page";
+    presenceData.state = "Waiting";
   } else {
     const users = (
       document.querySelector(".wnPUne") ?? document.querySelector(".uGOf1d")
     ).innerHTML;
     presenceData.smallImageKey = "vcall";
     presenceData.details = "In a meeting";
-    presenceData.state = `${users} users in the room`;
+    presenceData.state = `${users} people are in the call`;
   }
 
   presence.setActivity(presenceData);
